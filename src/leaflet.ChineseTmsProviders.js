@@ -16,7 +16,7 @@ if (L.Proj) {
     });
 }
 
-L.TileLayer.ChinaProvider = L.TileLayer.extend({
+L。TileLayer.ChinaProvider = L.TileLayer.extend({
 
     initialize: function(type, options) { // (type, Object)
         var providers = L.TileLayer.ChinaProvider.providers;
@@ -56,7 +56,7 @@ L.TileLayer.ChinaProvider = L.TileLayer.extend({
 		}
 
         data.sx = data.x >> 4
-        data.sy = (( 1 << data.z) - data.y) >> 4
+        data.sy = (( 1 << data.z) - data.y - 1) >> 4
 
 		return L.Util.template(this._url, L.Util.extend(data, this.options));
 	},
